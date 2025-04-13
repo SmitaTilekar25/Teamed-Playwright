@@ -1,0 +1,31 @@
+[
+    {
+      "name": "Valid Login",
+      "email": "smita+20@teamed.global",
+      "password": "Sharvilt_25",
+      "expectedStatus": 201,
+      "expectToken": true
+    },
+    {
+      "name": "Invalid Password",
+      "email": "smita@teamed.global",
+      "password": "wrongpassword",
+      "expectedStatus": 401,
+      "expectToken": false
+    },
+    {
+      "name": "Invalid Email",
+      "email": "invalid@teamed.global",
+      "password": "test123456",
+      "expectedStatus": 401,
+      "expectToken": false
+    },
+    {
+      "name": "Empty Credentials",
+      "email": "",
+      "password": "",
+      "expectedStatus": 401,
+      "expectToken": false
+    }
+  ]
+  

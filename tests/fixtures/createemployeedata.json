@@ -1,0 +1,116 @@
+[
+  {
+  "name":"All Fields Filled",
+  "requestBody":{
+    "employee": {
+      "first_name": "BlueSky",
+      "last_name": "1770",
+      "email": "",
+      "domicile_id": "c8608329-7689-4cc5-b52d-e1a1acd795d4",
+      "phone": {
+        "phone": "9089786756",
+        "country_code": "AF",
+        "code": "+93"
+      }
+    },
+    "contract": {
+      "fixed_term": "true",
+      "job_title": "Manager",
+      "gross_salary": "80000",
+      "attendance_type_id": "4ae80c3e-be70-4bcf-84a2-1a353a43519a",
+      "contract_type_id": "18c40e1c-8e23-4d63-8d63-9fbecc375b51",
+      "start_date": "2025-02-20",
+      "currency_id": "12049838-e383-45ea-828f-7d1e9e2a20fe",
+      "end_date": "2025-11-19"
+    }
+  },
+"expectedStatus": 201
+},
+
+{
+  "name":"Non Manadatory fields Filled",
+  "requestBody":{
+  "employee": {
+    "first_name": "smita@mailinator.com",
+    "last_name": "5",
+    "email": "",
+    "domicile_id": "c8608329-7689-4cc5-b52d-e1a1acd795d4",
+    "phone": {
+      "phone": "9089786756",
+      "country_code": "AF",
+      "code": "+93"
+    }
+  },
+  "contract": {
+    "fixed_term": "true",
+    "job_title": "",
+    "gross_salary": "80000",
+    "attendance_type_id": "4ae80c3e-be70-4bcf-84a2-1a353a43519a",
+    "contract_type_id": "18c40e1c-8e23-4d63-8d63-9fbecc375b51",
+    "start_date": "",
+    "currency_id": "12049838-e383-45ea-828f-7d1e9e2a20fe",
+    "end_date": ""
+  }
+  
+},
+"expectedStatus": 400
+},
+{
+  "name":"Unique Email",
+  "requestBody":{
+  "employee": {
+    "first_name": "smita",
+    "last_name": "tilekar",
+    "email": "bluesky1@mailinator.com",
+    "domicile_id": "c8608329-7689-4cc5-b52d-e1a1acd795d4",
+    "phone": {
+      "phone": "3456778898",
+      "country_code": "AF",
+      "code": "+93"
+    }
+  },
+  "contract": {
+    "fixed_term": "false",
+    "job_title": "Manager",
+    "gross_salary": "800000",
+    "attendance_type_id": "4ae80c3e-be70-4bcf-84a2-1a353a43519a",
+    "contract_type_id": "9028a138-0de1-48a7-9114-79a742424b11",
+    "start_date": "2025-02-25",
+    "currency_id": "12049838-e383-45ea-828f-7d1e9e2a20fe",
+    "contractor": true
+  }
+},
+"expectedStatus": 422
+},
+{
+  "name":"Employee as a Contractor and Contract:Permanaent",
+  "requestBody":{
+  "employee": {
+      "first_name": "smita",
+      "last_name": "tilekar",
+      "email": "",
+      "domicile_id": "c8608329-7689-4cc5-b52d-e1a1acd795d4",
+      "phone": {
+        "phone": "3456778898",
+        "country_code": "AF",
+        "code": "+93"
+      }
+    },
+    "contract": {
+      "fixed_term": "false",
+      "job_title": "Manager",
+      "gross_salary": "800000",
+      "attendance_type_id": "4ae80c3e-be70-4bcf-84a2-1a353a43519a",
+      "contract_type_id": "9028a138-0de1-48a7-9114-79a742424b11",
+      "start_date": "2025-02-25",
+      "currency_id": "12049838-e383-45ea-828f-7d1e9e2a20fe",
+      "contractor": true
+    }
+  
+  
+  },
+  "expectedStatus": 201
+  }
+
+
+]

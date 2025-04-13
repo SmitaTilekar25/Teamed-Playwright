@@ -1,0 +1,102 @@
+[
+  {
+    "name": "All Fields Filled",
+    "requestBody": {
+      "employer": {
+        "name": "Teamed4",
+        "vat_number": "AUS1234",
+        "industry_sector_id": "69b538fe-8b9a-429d-a332-e0856db9f9c3",
+        "domicile_id": "07431f33-6ea4-4cd4-a7fb-f7f41ee773dd",
+        "currency_id": "692371ae-234f-4a7a-80c8-d547348a09bb",
+        "identifiers": []
+      },
+      "registered_address": {
+        "line_one": "Australia1",
+        "line_two": "1",
+        "city": "1",
+        "state": "1",
+        "zip": "DE11by1",
+        "country_id": "640c672c-d4ac-4213-84ca-546597205bd3",
+        "use_as_contact_address": false
+      },
+      "primary_address": {
+        "line_one": "canada",
+        "line_two": "canada",
+        "city": "canada",
+        "state": "can456",
+        "zip": "cad346",
+        "country_id": "ef770ef6-2438-4513-b976-016ac7c64d24"
+      },
+      "officer": {
+        "first_name": "Key",
+        "last_name": "Contact",
+        "job_title": "Manager",
+        "email": "",  
+        "phone": {
+          "phone": "7890675645",
+          "country_code": "AU",
+          "code": "+61"
+        }
+      },
+      "codat_connection": {
+        "codat_company_id": "",
+        "codat_connection_id": "",
+        "supplier_id": "",
+        "supplier_name": "",
+        "bank_account_id": "",
+        "account_name": ""
+      }
+    },
+    "expectedStatus": 201
+  },
+  {
+    "name": "Mandatory fields not Filled",
+    "requestBody": {
+      "employer": {
+        "name": "",
+        "vat_number": "AUS1234",
+        "industry_sector_id": "",
+        "domicile_id": "",
+        "currency_id": "692371ae-234f-4a7a-80c8-d547348a09bb",
+        "identifiers": []
+      },
+      "registered_address": {
+        "line_one": "",
+        "line_two": "1",
+        "city": "1",
+        "state": "1",
+        "zip": "DE11by1",
+        "country_id": "640c672c-d4ac-4213-84ca-546597205bd3",
+        "use_as_contact_address": false
+      },
+      "primary_address": {
+        "line_one": "canada",
+        "line_two": "canada",
+        "city": "canada",
+        "state": "can456",
+        "zip": "cad346",
+        "country_id": "ef770ef6-2438-4513-b976-016ac7c64d24"
+      },
+      "officer": {
+        "first_name": "",
+        "last_name": "",
+        "job_title": "Manager",
+        "email": "",  
+        "phone": {
+          "phone": "7890675645",
+          "country_code": "AU",
+          "code": "+61"
+        }
+      },
+      "codat_connection": {
+        "codat_company_id": "",
+        "codat_connection_id": "",
+        "supplier_id": "",
+        "supplier_name": "",
+        "bank_account_id": "",
+        "account_name": ""
+      }
+    },
+    "expectedStatus": 400
+  }
+]
