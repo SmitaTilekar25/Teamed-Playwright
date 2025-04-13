@@ -2,8 +2,11 @@ const { expect } = require('@playwright/test');
 const axios = require('axios');
 const { google } = require('googleapis');
 
+
+//babase url
+
 const BASE_URL = 'https://tgapi-stage.teamed.global/v1';
-const Admin_BASE_URL = 'https://tgapi-stage.teamed.global/admin/v1';
+const Admin_BASE_URL = 'https://tgapi-stage.teamed.global/admin/v2';
 
 
 async function employerLogin(request, email, password, expectedStatus, expectToken) {
