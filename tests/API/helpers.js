@@ -302,10 +302,14 @@ async function employeeLogin(request, emailId, password) {
   console.log(`Employee Login Response Body:`, responseBody);
 
   // Check for both 200 and 201 as valid status codes
-  expect(response.status()).toBe(201);
-  expect(responseBody).toHaveProperty('token');
+ 
+  //expect(responseBody).toHaveProperty('token');
   
-  return responseBody.token;
+  return {
+    status: response.status(),
+    body: responseBody,
+    token: responseBody.token
+  };
 }
 
 module.exports = {
