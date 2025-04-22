@@ -261,7 +261,7 @@ test.describe.serial('Create Employee and login as Employee Tests', () => {
       console.log('login failed as expected');
     });
 
-    test('Employee Login with correct password', async ({ request }) => {
+    test('Attempting to login using incorrect password: ${employeeEmail} and ${emplyeePassword}', async ({ request }) => {
 
       let employeePassword = 'test123456'; // Store the password
       // First ensure we have the employee email and password
