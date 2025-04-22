@@ -251,7 +251,7 @@ test.describe.serial('Create Employee and login as Employee Tests', () => {
 
   test.describe('Employee Time Off Request and Approval by Employer', () => {
    
-    test('Employee login with mismatched password', async({request})=>{
+    test('Employee login with incorrcet password', async({request})=>{
 
       let employeePassword='test123';
       expect(employeeEmail).toBeDefined();
@@ -261,7 +261,7 @@ test.describe.serial('Create Employee and login as Employee Tests', () => {
       console.log('login failed as expected');
     });
 
-    test('Employee Login', async ({ request }) => {
+    test('Attempting to login using incorrect password: ${employeeEmail} and ${emplyeePassword}', async ({ request }) => {
 
       let employeePassword = 'test123456'; // Store the password
       // First ensure we have the employee email and password
