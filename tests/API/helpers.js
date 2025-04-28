@@ -312,6 +312,79 @@ async function employeeLogin(request, emailId, password) {
   };
 }
 
+async function employeeDetails(request,authToken,employeeId){
+const response=await request.get(`${BASE_URL}/employees/${employeeId}`, {
+  headers: {
+    'Authorization': `Bearer ${authToken}`,
+  }
+});
+const responsebody=await response.json();
+let countryCode=responsebody.data.user.phone.country_code;
+console.log('country code for ${employeeId} is: ${countryCode}');
+
+return {
+  status: response.status(),
+  body: responsebody,
+  countryCode: countryCode
+};
+
+}
+
+
+async function customHolidays(request,authToken,countryCode) {
+  const response=await request.get(`${BASE_URL}/custom_holidays?year=2025&country=${countryCode}`,
+  {
+    headers:{
+      'Authorization': 'Bearer ${authToken}',
+    }
+
+});
+return{
+  status:response.status,
+  body:response.body,
+  countryCode:response.countryCode
+}
+}
+
+async function calendarificAPI(request,year,authToken,countryCode,contractId){
+const response=await request.get(`${BASE_URL}/calendarific?year=${year}&country=${countryCode}}&contract_id=${contractId}`,
+{
+  headers:{
+    'Authorization': 'Bearer ${authToken}',
+  }
+});
+return{
+  status:response.sttaus,
+  body:response.body
+}
+
+}
+
+async function createPlanner(request,authToken,contractId)
+{
+  const response=await response.post('${BASE_URL}/contracts/${contractId}/planners',
+  {
+    headers:{
+      'Authorization': 'Bearer ${authToken}',
+    },
+    data:
+    {
+      "planner": {
+        "public_holidays": [
+          "2025-04-11",
+          "2025-04-08",
+          "2025-05-13",
+          
+        ]
+       
+      }
+    }
+  }
+  )
+}
+
+
+
 module.exports = {
   adminLogin,
   createEmployee,
