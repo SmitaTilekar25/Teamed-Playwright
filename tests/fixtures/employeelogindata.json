@@ -1,14 +1,16 @@
-[
+
+
+  [
     {
       "name": "Valid Login",
-      "email": "smita+20@teamed.global",
-      "password": "Sharvilt_25",
+      "email": "smita+90@teamed.global",
+      "password": "test123456",
       "expectedStatus": 201,
       "expectToken": true
     },
     {
       "name": "Invalid Password",
-      "email": "smita@teamed.global",
+      "email": "afghan@mailinator.com",
       "password": "wrongpassword",
       "expectedStatus": 401,
       "expectToken": false
@@ -28,4 +30,3 @@
       "expectToken": false
     }
   ]
-  

@@ -5,8 +5,11 @@ const { google } = require('googleapis');
 
 
 const BASE_URL = 'https://tgapi-stage.teamed.global/v1';
-const Admin_BASE_URL = 'https://tgapi-stage.teamed.global/admin/v1';
+const Admin_BASE_URL = 'https://tgapi-stage.teamed.global/admin/v1'; 
 
+
+/*const BASE_URL = 'https://api.dev.teamed.global/v1';
+const Admin_BASE_URL = 'https://api.dev.teamed.global/admin/v1'; */
 
 async function employerLogin(request, email, password, expectedStatus, expectToken) {
   const response = await request.post(`${BASE_URL}/auth/login`, {
@@ -362,25 +365,30 @@ return{
 
 async function createPlanner(request,authToken,contractId)
 {
-  const response=await response.post('${BASE_URL}/contracts/${contractId}/planners',
+  console.log(`Creating planner for contract Id: ${contractId}`);
+  console.log(`Authorization Token: ${authToken}`);
+  const response = await request.post(`${BASE_URL}/contracts/${contractId}/planners`,
   {
-    headers:{
-      'Authorization': 'Bearer ${authToken}',
+    headers: {
+      'Authorization': `Bearer ${authToken}`
     },
-    data:
-    {
+    data: {
       "planner": {
         "public_holidays": [
           "2025-04-11",
           "2025-04-08",
-          "2025-05-13",
-          
-        ]
-       
+          "2025-05-13"
+        ],
+         "year": 2025
+        
       }
     }
-  }
-  )
+  });
+  expect(response.status()).toBe(201);
+  const responseBody = await response.json();
+  console.log(responseBody);
+  const status=response.status();
+  return status;
 }
 
 
@@ -397,4 +405,7 @@ module.exports = {
   extractActivationLink,
   employeeLogin,
   createNewPasswordforEmployees,
+  createPlanner,
+  calendarificAPI,
+  customHolidays,
 };

@@ -8,6 +8,9 @@ const { request } = require('http');
 const employeeCredentials = require('../../fixtures/employeeCredentials.json');
 
 const BASE_URL = 'https://tgapi-stage.teamed.global/v1';
+
+//const BASE_URL = 'https://api.dev.teamed.global/v1';
+
 let authToken = '';
 let adminAuthToken = '';
 let contractId = '';
