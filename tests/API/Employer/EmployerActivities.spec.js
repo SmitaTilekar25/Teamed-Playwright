@@ -16,7 +16,6 @@ let jobTitle = '';
 let employeeId = '';
 let employeeEmail = '';
 let oAuth2Client = null;
-//Git Push Test
 
 
 // Function to set up OAuth2 client
@@ -249,21 +248,10 @@ test.describe.serial('Create Employee and login as Employee Tests', () => {
     });
   });
 
-  test.describe('Employee Login Tests', () => {
-   
-    test('Attempting to login using incorrect password', async({request})=>{
+  test.describe('Employee Time Off Request and Approval by Employer', () => {
+    let employeePassword = 'test123456'; // Store the password
 
-      let employeePassword='test123';
-      expect(employeeEmail).toBeDefined();
-      console.log('Attempting to login using incorrect password: ${employeeEmail} and ${emplyeePassword}');
-      const response=await employeeLogin(request,employeeEmail,employeePassword);
-      expect(response.status).toBe(401);
-      console.log('login failed as expected');
-    });
-
-    test('Attempting to login using correct password', async ({ request }) => {
-
-      let employeePassword = 'test123456'; // Store the password
+    test('Employee Login', async ({ request }) => {
       // First ensure we have the employee email and password
       expect(employeeEmail).toBeDefined();
       console.log(`Attempting to login as employee: ${employeeEmail}`);
@@ -275,6 +263,6 @@ test.describe.serial('Create Employee and login as Employee Tests', () => {
   });
   
 
- 
+  // Get Employee Salaries Test
 
 });

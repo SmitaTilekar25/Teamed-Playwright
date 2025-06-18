@@ -1,0 +1,553 @@
+{
+    "meta": {
+        "code": 200
+    },
+    "response": {
+        "holidays": [
+            {
+                "name": "Liberation Day",
+                "description": "Liberation Day is a public holiday in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-02-15",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 2,
+                        "day": 15
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/soviet-withdrawal-day",
+                "urlid": "afghanistan/soviet-withdrawal-day",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "First Day of Ramadan",
+                "description": "Ramadan is a period of prayer, reflection and fasting for many Muslims worldwide. It is the ninth month in the Islamic calendar.",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-03-01",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 3,
+                        "day": 1
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/ramadan-begins",
+                "urlid": "afghanistan/ramadan-begins",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "March Equinox",
+                "description": "March Equinox in Afghanistan (Kabul)",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-03-20T13:31:21+04:30",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 3,
+                        "day": 20,
+                        "hour": 13,
+                        "minute": 31,
+                        "second": 21
+                    },
+                    "timezone": {
+                        "offset": "+04:30",
+                        "zoneabb": "AFT",
+                        "zoneoffset": 16200,
+                        "zonedst": 0,
+                        "zonetotaloffset": 16200
+                    }
+                },
+                "type": [
+                    "Season"
+                ],
+                "primary_type": "Season",
+                "canonical_url": "https://calendarific.com/holiday/seasons/vernal-equinox",
+                "urlid": "seasons/vernal-equinox",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Nauruz",
+                "description": "Nauruz is a observance in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-03-21",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 3,
+                        "day": 21
+                    }
+                },
+                "type": [
+                    "Observance"
+                ],
+                "primary_type": "Observance",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/naw-roz",
+                "urlid": "afghanistan/naw-roz",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Eid al-Fitr",
+                "description": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-03-30",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 3,
+                        "day": 30
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/eid-al-fitr",
+                "urlid": "afghanistan/eid-al-fitr",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Eid al-Fitr Holiday",
+                "description": "Eid al-Fitr Holiday is a public holiday in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-03-31",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 3,
+                        "day": 31
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/eid-al-fitr-1",
+                "urlid": "afghanistan/eid-al-fitr-1",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Eid al-Fitr Holiday",
+                "description": "Eid al-Fitr Holiday is a public holiday in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-04-01",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 4,
+                        "day": 1
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/eid-al-fitr-2",
+                "urlid": "afghanistan/eid-al-fitr-2",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Afghan Victory Day",
+                "description": "Afghan Victory Day is a public holiday in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-04-28",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 4,
+                        "day": 28
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/afghan-victory-day",
+                "urlid": "afghanistan/afghan-victory-day",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Labor Day",
+                "description": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-05-01",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 5,
+                        "day": 1
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/labor-day",
+                "urlid": "afghanistan/labor-day",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Day of Arafat",
+                "description": "Day of Arafat is a public holiday in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-06-06",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 6,
+                        "day": 6
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/day-of-arafat",
+                "urlid": "afghanistan/day-of-arafat",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Eid al-Qurban",
+                "description": "Eid al-Adha (Id ul-Adha) is an Islamic festival falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to commemorate the willingness of Ibrahim (Abraham) to sacrifice his son.",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-06-07",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 6,
+                        "day": 7
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/eid-al-adha",
+                "urlid": "afghanistan/eid-al-adha",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Eid al-Qurban Holiday",
+                "description": "Eid al-Qurban Holiday is a public holiday in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-06-08",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 6,
+                        "day": 8
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/eid-al-adha-day-2",
+                "urlid": "afghanistan/eid-al-adha-day-2",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Eid al-Qurban Holiday",
+                "description": "Eid al-Qurban Holiday is a public holiday in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-06-09",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 6,
+                        "day": 9
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/eid-al-adha-day-3",
+                "urlid": "afghanistan/eid-al-adha-day-3",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "June Solstice",
+                "description": "June Solstice in Afghanistan (Kabul)",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-06-21T07:12:15+04:30",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 6,
+                        "day": 21,
+                        "hour": 7,
+                        "minute": 12,
+                        "second": 15
+                    },
+                    "timezone": {
+                        "offset": "+04:30",
+                        "zoneabb": "AFT",
+                        "zoneoffset": 16200,
+                        "zonedst": 0,
+                        "zonetotaloffset": 16200
+                    }
+                },
+                "type": [
+                    "Season"
+                ],
+                "primary_type": "Season",
+                "canonical_url": "https://calendarific.com/holiday/seasons/june-solstice",
+                "urlid": "seasons/june-solstice",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Ashura",
+                "description": "Ashura is a public holiday in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-07-06",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 7,
+                        "day": 6
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/ashura",
+                "urlid": "afghanistan/ashura",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Independence Day (National Day)",
+                "description": "Independence Day (National Day) is a public holiday in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-08-19",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 8,
+                        "day": 19
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/independence-day",
+                "urlid": "afghanistan/independence-day",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Anniversary of the Withdrawal of Foreign Troops",
+                "description": "Anniversary of the Withdrawal of Foreign Troops is a public holiday in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-08-31",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 8,
+                        "day": 31
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/foreign-troop-withdrawal-anniversary-day",
+                "urlid": "afghanistan/foreign-troop-withdrawal-anniversary-day",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "The Prophet's Birthday",
+                "description": "Mawlid, or Milad, marks the birth of the Islamic prophet Muhammed, or Mohamed, in the year 570 of the Gregorian calendar.",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-09-05",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 9,
+                        "day": 5
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/prophet-birthday",
+                "urlid": "afghanistan/prophet-birthday",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "Martyrs and Ahmad Shah Masoud Day",
+                "description": "Martyrs and Ahmad Shah Masoud Day is a public holiday in Afghanistan",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-09-09",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 9,
+                        "day": 9
+                    }
+                },
+                "type": [
+                    "National holiday"
+                ],
+                "primary_type": "Public Holiday",
+                "canonical_url": "https://calendarific.com/holiday/afghanistan/martyrs-and-ahmad-shah-masoud-day",
+                "urlid": "afghanistan/martyrs-and-ahmad-shah-masoud-day",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "September Equinox",
+                "description": "September Equinox in Afghanistan (Kabul)",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-09-22T22:49:22+04:30",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 9,
+                        "day": 22,
+                        "hour": 22,
+                        "minute": 49,
+                        "second": 22
+                    },
+                    "timezone": {
+                        "offset": "+04:30",
+                        "zoneabb": "AFT",
+                        "zoneoffset": 16200,
+                        "zonedst": 0,
+                        "zonetotaloffset": 16200
+                    }
+                },
+                "type": [
+                    "Season"
+                ],
+                "primary_type": "Season",
+                "canonical_url": "https://calendarific.com/holiday/seasons/autumnal-equinox",
+                "urlid": "seasons/autumnal-equinox",
+                "locations": "All",
+                "states": "All"
+            },
+            {
+                "name": "December Solstice",
+                "description": "December Solstice in Afghanistan (Kabul)",
+                "country": {
+                    "id": "af",
+                    "name": "Afghanistan"
+                },
+                "date": {
+                    "iso": "2025-12-21T19:33:05+04:30",
+                    "datetime": {
+                        "year": 2025,
+                        "month": 12,
+                        "day": 21,
+                        "hour": 19,
+                        "minute": 33,
+                        "second": 5
+                    },
+                    "timezone": {
+                        "offset": "+04:30",
+                        "zoneabb": "AFT",
+                        "zoneoffset": 16200,
+                        "zonedst": 0,
+                        "zonetotaloffset": 16200
+                    }
+                },
+                "type": [
+                    "Season"
+                ],
+                "primary_type": "Season",
+                "canonical_url": "https://calendarific.com/holiday/seasons/december-solstice",
+                "urlid": "seasons/december-solstice",
+                "locations": "All",
+                "states": "All"
+            }
+        ]
+    }
+}
