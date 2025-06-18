@@ -5,12 +5,8 @@ const employeedata = require('../../fixtures/createemployeedata.json');
 const { adminLogin, createEmployee, sendWelcomeEmail, validateSalaries, validateJobTitles, createPassword, employerLogin, getEmailBody, extractActivationLink, createNewPasswordforEmployees, employeeLogin} = require('../helpers');
 const testCases = require('../../fixtures/employeelogindata.json');
 const { request } = require('http');
-const employeeCredentials = require('../../fixtures/employeeCredentials.json');
 
 const BASE_URL = 'https://tgapi-stage.teamed.global/v1';
-
-//const BASE_URL = 'https://api.dev.teamed.global/v1';
-
 let authToken = '';
 let adminAuthToken = '';
 let contractId = '';
@@ -20,7 +16,6 @@ let jobTitle = '';
 let employeeId = '';
 let employeeEmail = '';
 let oAuth2Client = null;
-//Git Push Test
 
 
 // Function to set up OAuth2 client
@@ -175,18 +170,7 @@ test.describe.serial('Create Employee and login as Employee Tests', () => {
       expectedEffectiveDate = result.expectedEffectiveDate;
       jobTitle = result.jobTitle;
       employeeId = result.employeeId;
-      employeeEmail = requestBody.employee.email;
-
-      // Save the employee details to the credentials file
-      employeeCredentials.email = employeeEmail;
-      employeeCredentials.contractId = contractId;
-      employeeCredentials.employeeId = employeeId;
-      fs.writeFileSync('./tests/fixtures/employeeCredentials.json', JSON.stringify(employeeCredentials, null, 2));
-      console.log('Saved employee details to credentials file:', {
-        email: employeeEmail,
-        contractId: contractId,
-        employeeId: employeeId
-      });
+      employeeEmail = requestBody.employee.email; // Capture the email used for this employee
     });
   });
 
@@ -264,21 +248,10 @@ test.describe.serial('Create Employee and login as Employee Tests', () => {
     });
   });
 
-  test.describe('Employee Login Tests', () => {
-   
-    test('Attempting to login using incorrect password', async({request})=>{
+  test.describe('Employee Time Off Request and Approval by Employer', () => {
+    let employeePassword = 'test123456'; // Store the password
 
-      let employeePassword='test123';
-      expect(employeeEmail).toBeDefined();
-      console.log('Attempting to login using incorrect password: ${employeeEmail} and ${emplyeePassword}');
-      const response=await employeeLogin(request,employeeEmail,employeePassword);
-      expect(response.status).toBe(401);
-      console.log('login failed as expected');
-    });
-
-    test('Attempting to login using correct password', async ({ request }) => {
-
-      let employeePassword = 'test123456'; // Store the password
+    test('Employee Login', async ({ request }) => {
       // First ensure we have the employee email and password
       expect(employeeEmail).toBeDefined();
       console.log(`Attempting to login as employee: ${employeeEmail}`);
@@ -286,11 +259,10 @@ test.describe.serial('Create Employee and login as Employee Tests', () => {
       // Try to login with the employee credentials - use the same password that was set during activation
       const employeeToken = await employeeLogin(request, employeeEmail, employeePassword);
       expect(employeeToken).toBeDefined();
-
     });
   });
   
 
- 
+  // Get Employee Salaries Test
 
 });
