@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const fs = require('fs');
 const { google } = require('googleapis');
 const employeedata = require('../../fixtures/createemployeedata.json');
-const { adminLogin, createEmployee, sendWelcomeEmail, validateSalaries, validateJobTitles, createPassword, employerLogin, getEmailBody, extractActivationLink, createNewPasswordforEmployees, employeeLogin} = require('../helpers');
+const { adminLogin, createEmployee, sendWelcomeEmail, validateSalaries, validateJobTitles, createPassword, employerLogin, getEmailBody, extractActivationLink, createNewPasswordforEmployees, employeeLogin} = require('../../api/index');
 const testCases = require('../../fixtures/employeelogindata.json');
 const { request } = require('http');
 
@@ -24,14 +24,14 @@ async function setupOAuth2Client() {
     return oAuth2Client;
   }
 
-  const credentials = JSON.parse(fs.readFileSync('./tests/credentials.json'));
+  const credentials = JSON.parse(fs.readFileSync('./tests/fixtures/credentials.json'));
   const { client_secret, client_id, redirect_uris } = credentials.web;
   oAuth2Client = new google.auth.OAuth2(client_id, client_secret, redirect_uris[0]);
 
   try {
     // First try to use existing refresh token from refresh_token.txt
-    if (fs.existsSync('./tests/refresh_token.txt')) {
-      const refreshToken = fs.readFileSync('./tests/refresh_token.txt', 'utf-8').trim();
+    if (fs.existsSync('./tests/fixtures/refresh_token.txt')) {
+      const refreshToken = fs.readFileSync('./tests/fixtures/refresh_token.txt', 'utf-8').trim();
       console.log('Found existing refresh token in refresh_token.txt');
       
       // Set up initial tokens object
@@ -65,7 +65,7 @@ async function setupOAuth2Client() {
     });
     console.log('Authorize this app by visiting this URL:', authUrl);
     
-    const code = process.env.AUTH_CODE || fs.readFileSync('./tests/auth_code.txt', 'utf-8').trim();
+    const code = process.env.AUTH_CODE || fs.readFileSync('./tests/fixtures/auth_code.txt', 'utf-8').trim();
     if (!code || code.includes('PASTE YOUR AUTHORIZATION CODE HERE')) {
       throw new Error('Please complete the authorization flow and provide a fresh authorization code');
     }
@@ -76,7 +76,7 @@ async function setupOAuth2Client() {
     
     // Save refresh token for future use
     if (tokens.refresh_token) {
-      fs.writeFileSync('./tests/refresh_token.txt', tokens.refresh_token);
+      fs.writeFileSync('./tests/fixtures/refresh_token.txt', tokens.refresh_token);
       console.log('New refresh token saved to refresh_token.txt');
     }
     
