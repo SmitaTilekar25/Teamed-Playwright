@@ -4,6 +4,7 @@ const employeeHelpers = require('./employeeHelpers');
 const validationHelpers = require('./validationHelpers');
 const emailHelpers = require('./emailHelpers');
 const calendarHelpers = require('./calendarHelpers');
+const helpers = require('./helpers');
 const config = require('./config');
 
 module.exports = {
@@ -21,6 +22,9 @@ module.exports = {
   
   // Calendar and holiday functions
   ...calendarHelpers,
+  
+  // Main helper functions
+  ...helpers,
   
   // Configuration
   config

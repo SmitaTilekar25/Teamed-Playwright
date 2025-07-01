@@ -1,4 +1,71 @@
 const { EMAIL_RETRY_CONFIG, ACTIVATION_LINK_REGEX } = require('./config');
+const fs = require('fs');
+const { google } = require('googleapis');
+
+async function setupOAuth2Client() {
+  let oAuth2Client = null;
+
+  if (oAuth2Client) {
+    return oAuth2Client;
+  }
+
+  const credentials = JSON.parse(fs.readFileSync('./tests/fixtures/credentials.json'));
+  const { client_secret, client_id, redirect_uris } = credentials.web;
+  oAuth2Client = new google.auth.OAuth2(client_id, client_secret, redirect_uris[0]);
+
+  try {
+    if (fs.existsSync('./tests/fixtures/refresh_token.txt')) {
+      const refreshToken = fs.readFileSync('./tests/fixtures/refresh_token.txt', 'utf-8').trim();
+      console.log('Found existing refresh token in refresh_token.txt');
+      
+      const tokens = {
+        refresh_token: refreshToken,
+        scope: 'https://www.googleapis.com/auth/gmail.readonly',
+        token_type: 'Bearer',
+        expiry_date: 0
+      };
+
+      oAuth2Client.setCredentials(tokens);
+      
+      try {
+        await oAuth2Client.getAccessToken();
+        console.log('Successfully refreshed access token');
+        return oAuth2Client;
+      } catch (refreshError) {
+        console.error('Error refreshing token:', refreshError);
+      }
+    }
+
+    console.log('Starting new authorization flow...');
+    const authUrl = oAuth2Client.generateAuthUrl({
+      access_type: 'offline',
+      scope: ['https://www.googleapis.com/auth/gmail.readonly'],
+      prompt: 'consent'
+    });
+    console.log('Authorize this app by visiting this URL:', authUrl);
+    
+    const code = process.env.AUTH_CODE || fs.readFileSync('./tests/fixtures/auth_code.txt', 'utf-8').trim();
+    if (!code || code.includes('PASTE YOUR AUTHORIZATION CODE HERE')) {
+      throw new Error('Please complete the authorization flow and provide a fresh authorization code');
+    }
+
+    // Exchange authorization code for tokens
+    const { tokens } = await oAuth2Client.getToken(code);
+    console.log('Received new tokens from authorization');
+    
+    // Save refresh token for future use
+    if (tokens.refresh_token) {
+      fs.writeFileSync('./tests/fixtures/refresh_token.txt', tokens.refresh_token);
+      console.log('New refresh token saved to refresh_token.txt');
+    }
+    
+    oAuth2Client.setCredentials(tokens);
+    return oAuth2Client;
+  } catch (error) {
+    console.error('OAuth setup error:', error);
+    throw error;
+  }
+}
 
 async function getEmailBody(gmail, recipientEmail) {
   const maxRetries = EMAIL_RETRY_CONFIG.maxRetries;
@@ -81,6 +148,7 @@ function extractActivationLink(emailBody) {
 }
 
 module.exports = {
+  setupOAuth2Client,
   getEmailBody,
   extractActivationLink
 }; 

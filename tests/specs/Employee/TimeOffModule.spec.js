@@ -12,6 +12,8 @@ adminAuthToken=await adminLogin(request);
 
 test('Create a planner for Employee',async({request})=>
 {
+  const 
+  const responseCraeteEmployee=await createEmployee(request, authToken, requestBody, expectedStatus)
   expect(contractId).toBeDefined();
   const response=await createPlanner(request,adminAuthToken,contractId)
   expect(response).toBe(201);

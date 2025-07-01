@@ -1,5 +1,5 @@
 const { expect } = require('@playwright/test');
-const { BASE_URL } = require('./config');
+const { BASE_URL, Admin_BASE_URL } = require('./config');
 
 async function customHolidays(request,authToken,countryCode) {
   const response=await request.get(`${BASE_URL}/custom_holidays?year=2025&country=${countryCode}`,
@@ -34,7 +34,7 @@ async function createPlanner(request,authToken,contractId)
 {
   console.log(`Creating planner for contract Id: ${contractId}`);
   console.log(`Authorization Token: ${authToken}`);
-  const response = await request.post(`${BASE_URL}/contracts/${contractId}/planners`,
+  const response = await request.post(`${Admin_BASE_URL}/contracts/${contractId}/planners`,
   {
     headers: {
       'Authorization': `Bearer ${authToken}`

@@ -363,11 +363,19 @@ return{
 
 }
 
+// Function to generate a unique Gmail address
+function generateUniqueGmail() {
+  const uniqueId = Date.now() + Math.floor(Math.random() * 1000);
+  const emailAddress = `smita+${uniqueId}@teamed.global`;
+  console.log(`Generated Unique Gmail Address: ${emailAddress}`);
+  return emailAddress;
+}
+
 async function createPlanner(request,authToken,contractId)
 {
   console.log(`Creating planner for contract Id: ${contractId}`);
   console.log(`Authorization Token: ${authToken}`);
-  const response = await request.post(`${BASE_URL}/contracts/${contractId}/planners`,
+  const response = await request.post(`${Admin_BASE_URL}/contracts/${contractId}/planners`,
   {
     headers: {
       'Authorization': `Bearer ${authToken}`
@@ -408,4 +416,5 @@ module.exports = {
   createPlanner,
   calendarificAPI,
   customHolidays,
+  generateUniqueGmail,
 };
