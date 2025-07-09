@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-const testCases = require('../fixtures/employeelogindata.json');
+const testCases = require('../../fixtures/employeelogindata.json');
 
 const BASE_URL = 'https://tgapi-stage.teamed.global/v1';
 

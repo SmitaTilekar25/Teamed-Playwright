@@ -36,7 +36,7 @@ async function employerLogin(request, email, password, expectedStatus, expectTok
 }
 
 async function adminLogin(request) {
-  const response = await request.post(`${BASE_URL}/auth/login`, {
+  const response = await request.post(`${Admin_BASE_URL}/auth/login`, {
     data: {
       email: 'smita@teamed.global',
       password: 'test123456'
@@ -383,18 +383,19 @@ async function createPlanner(request,authToken,contractId)
     data: {
       "planner": {
         "public_holidays": [
-          "2025-04-11",
-          "2025-04-08",
-          "2025-05-13"
+          {"date": "2025-04-11", "name": "Test Holiday 1"},
+          {"date": "2025-04-08", "name": "Test Holiday 2"},
+          {"date": "2025-05-13", "name": "Test Holiday 3"}
         ],
          "year": 2025
         
       }
     }
   });
-  expect(response.status()).toBe(201);
   const responseBody = await response.json();
-  console.log(responseBody);
+  console.log('Create Planner Response Status:', response.status());
+  console.log('Create Planner Response Body:', responseBody);
+  expect(response.status()).toBe(201);
   const status=response.status();
   return status;
 }

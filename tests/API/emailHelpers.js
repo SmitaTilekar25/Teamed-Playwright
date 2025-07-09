@@ -66,6 +66,13 @@ async function setupOAuth2Client() {
     throw error;
   }
 }
+// Function to generate a unique Gmail address
+function generateUniqueGmail() {
+  const uniqueId = Date.now() + Math.floor(Math.random() * 1000);
+  const emailAddress = `smita+${uniqueId}@teamed.global`;
+  console.log(`Generated Unique Gmail Address: ${emailAddress}`);
+  return emailAddress;
+}
 
 async function getEmailBody(gmail, recipientEmail) {
   const maxRetries = EMAIL_RETRY_CONFIG.maxRetries;
@@ -150,5 +157,6 @@ function extractActivationLink(emailBody) {
 module.exports = {
   setupOAuth2Client,
   getEmailBody,
-  extractActivationLink
+  extractActivationLink,
+  generateUniqueGmail
 }; 

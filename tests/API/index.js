@@ -4,7 +4,7 @@ const employeeHelpers = require('./employeeHelpers');
 const validationHelpers = require('./validationHelpers');
 const emailHelpers = require('./emailHelpers');
 const calendarHelpers = require('./calendarHelpers');
-const helpers = require('./helpers');
+// const helpers = require('./helpers');
 const config = require('./config');
 
 module.exports = {
@@ -20,11 +20,11 @@ module.exports = {
   // Email handling functions
   ...emailHelpers,
   
-  // Calendar and holiday functions
-  ...calendarHelpers,
+  // General helper functions (disabled - not currently using)
+  // ...helpers,
   
-  // Main helper functions
-  ...helpers,
+  // Calendar and holiday functions (comes after helpers to override createPlanner)
+  ...calendarHelpers,
   
   // Configuration
   config

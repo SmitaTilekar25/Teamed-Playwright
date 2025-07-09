@@ -17,7 +17,8 @@ const {
   createNewPasswordforEmployees, 
   employeeLogin, 
   createPlanner,
-  generateUniqueGmail
+  generateUniqueGmail,
+  saveEmployeeCredentials
 } = require('../../api/index');
 
 const { setupOAuth2Client } = require('../../api/emailHelpers');
@@ -33,6 +34,9 @@ let jobTitle = '';
 let employeeId = '';
 let employeeEmail = '';
 let oAuth2Client = null;
+
+
+
 
 // Login Test - Ensure authToken is set
 test.describe.serial('Employer Authentication Tests', () => {
@@ -177,6 +181,8 @@ test.describe.serial('Create Employee and login as Employee Tests', () => {
       
       // Validate first, like frontend does
       validatePasswords(password, password_again);
+
+      saveEmployeeCredentials(employeeEmail, password, contractId, employeeId);
       
       // Only make API call if validation passes
       const response = await createNewPasswordforEmployees(request, activationCode, password, password_again);
@@ -185,22 +191,4 @@ test.describe.serial('Create Employee and login as Employee Tests', () => {
     });
   });
 
-  test.describe('Employee Time Off Request and Approval by Employer', () => {
-    test('Create a planner for Employee', async ({ request }) => {
-      const response = await createPlanner(request, adminAuthToken, contractId);
-      expect(response).toBe(201);
-    });
-
-    let employeePassword = 'test123456'; // Store the password
-
-    test('Employee Login', async ({ request }) => {
-      // First ensure we have the employee email and password
-      expect(employeeEmail).toBeDefined();
-      console.log(`Attempting to login as employee: ${employeeEmail}`);
-      
-      // Try to login with the employee credentials - use the same password that was set during activation
-      const employeeToken = await employeeLogin(request, employeeEmail, employeePassword);
-      expect(employeeToken).toBeDefined();
-    });
-  });
-
+ 

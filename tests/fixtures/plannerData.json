@@ -1,0 +1,80 @@
+{
+  "scenarios": {
+    "publicHolidaysOnly": {
+      "planner": {
+        "public_holidays": [
+          {
+            "date": "2025-04-11",
+            "name": "Test Holiday 1"
+          },
+          {
+            "date": "2025-04-08",
+            "name": "Test Holiday 2"
+          },
+          {
+            "date": "2025-05-13",
+            "name": "Test Holiday 3"
+          }
+        ]
+      }
+    },
+    "leaveIdsOnly": {
+      "planner": {
+        "public_holidays": [],
+        "ad9cad8c-5835-4289-83d7-ca65cec37b7b": "10",
+        "f980b53d-48a3-4688-ba66-8724462e70de": "5",
+        "2ead9878-0c57-4267-9077-0bd6d7bb8258": "1"
+      }
+    },
+    "yearOnly": {
+      "planner": {
+        "public_holidays": [],
+        "year": 2025
+      }
+    },
+    "allData": {
+      "planner": {
+        "public_holidays": [
+          {
+            "date": "2025-04-11",
+            "name": "Test Holiday 1"
+          },
+          {
+            "date": "2025-04-08",
+            "name": "Test Holiday 2"
+          },
+          {
+            "date": "2025-05-13",
+            "name": "Test Holiday 3"
+          }
+        ],
+        "year": 2025,
+        "ad9cad8c-5835-4289-83d7-ca65cec37b7b": "10",
+        "f980b53d-48a3-4688-ba66-8724462e70de": "5",
+        "2ead9878-0c57-4267-9077-0bd6d7bb8258": "1"
+      }
+    },
+      "Duplicate year calendar": {
+        "planner": {
+          "public_holidays": [
+            {
+              "date": "2025-04-11",
+              "name": "Test Holiday 1"
+            },
+            {
+              "date": "2025-04-08",
+              "name": "Test Holiday 2"
+            },
+            {
+              "date": "2025-05-13",
+              "name": "Test Holiday 3"
+            }
+          ],
+          "year": 2025,
+          "ad9cad8c-5835-4289-83d7-ca65cec37b7b": "10",
+          "f980b53d-48a3-4688-ba66-8724462e70de": "5",
+          "2ead9878-0c57-4267-9077-0bd6d7bb8258": "1"
+        }
+    }
+  }
+} 
